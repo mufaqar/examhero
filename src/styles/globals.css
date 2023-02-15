@@ -5,6 +5,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600;700;800;900&display=swap');
 
+@layer components{
+     .button{
+          @apply bg-main gap-2 text-white flex items-center justify-center p-2 px-4 text-base rounded-xl
+     }
+}
+
 .body{
      font-family: 'Urbanist', sans-serif;
 }
