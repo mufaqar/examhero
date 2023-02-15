@@ -1,9 +1,17 @@
 import React from 'react';
-import {CompanyBanner} from '@/components/imports';
+import { CompanyBanner, NewsBox } from '@/components/imports';
+import {Container} from '../constant/imports';
 
 function Company_Module() {
   return (
-    <CompanyBanner />
+    <>
+      <CompanyBanner />
+      <section>
+        <Container>
+          <NewsBox />
+        </Container>
+      </section>
+    </>
   )
 }
 
