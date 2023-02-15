@@ -1,0 +1,1 @@
+export {default as Company_Module} from './company-module';
