@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import {CompanyBanner} from '@/components/imports';
 
 function Company_Module() {
   return (
-    <div>Company_Module</div>
+    <CompanyBanner />
   )
 }
 
