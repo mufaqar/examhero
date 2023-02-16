@@ -31,7 +31,7 @@ function Header() {
           </nav>
           <div className='flex items-center gap-4'>
             <button className='p-2 shadow-lg rounded-md'><BiSearch className='text-main' size={20} /></button>
-            <button className='button'> <BiUser /> Login / Register 01</button>
+            <button className='button'> <BiUser /> Login / Register</button>
             {/* hamburger  */}
             <button className='md:hidden'><HiOutlineMenuAlt3 /></button>
           </div>
