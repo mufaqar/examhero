@@ -1,30 +1,31 @@
 import { Container } from "@/constant/imports";
 import Image from "next/image";
+import { HeroImage } from "public/images/imports";
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 
 const Main = () => {
   return (
-    <main className="h-screen bg-light-pink flex flex-col items-center justify-center">
+    <main className="md:h-[calc(100vh-87px)] mianbg flex flex-col items-center justify-center mt-36 md:mt-[87px]">
       <Container small={true}>
         <section className="grid md:grid-cols-2 gap-20 justify-between items-center">
           <div>
-            <span>Better Learning Future With Us</span>
-            <h1>The Largest AI Education Platform in Hong Kong and Macau</h1>
-            <p>
+            <span className="font-semibold text-main uppercase">Better Learning Future With Us</span>
+            <h1 className="main-heading">The Largest AI Education Platform in Hong Kong and Macau</h1>
+            <p className="text-gray-600 leading-8 font-normal">
               ExamHero is an enterprise that solves learning problems with
               artificial intelligence (AI) systems. We insist on continuously
               bringing users better learning and using experience, creating the
               best learning results, and are committed to making high-quality
               education within easy reach, learning and evaluation.
             </p>
-            <button className="button">
+            <button className="button p-3 mt-5">
               Get Started Today <BsArrowRightShort />
             </button>
           </div>
-          <div className="lg:p-10">
+          <div className="p-10 pt-0 md:pt-10">
             <Image
-              src="/images/hero-image.png"
+              src={HeroImage}
               alt="main-image"
               width={610}
               height={762}

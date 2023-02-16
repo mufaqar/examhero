@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-// import {Logo} from '../../public/images/imports'
+import { SiteLogo } from '../../public/images/imports'
 
 const Logo = () => {
   return (
     <Link href="/">
       <Image
-        src="/images/logo.png"
+        src={SiteLogo}
         alt="logo"
         className="rounded-lg cursor-pointer"
         width={63}
