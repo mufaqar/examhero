@@ -79,3 +79,13 @@
 -webkit-box-shadow: 0px 0px 17px 2px rgba(130,130,130,0.16);
 -moz-box-shadow: 0px 0px 17px 2px rgba(130,130,130,0.16);
 }
+
+.feedbackBg{
+     background-image: linear-gradient(to bottom, rgba(255, 199, 167, 0.22) 0%,rgba(255, 199, 167, 0.22) 100%), url('../../public/images/whatwedo-diamond.png');
+}
+.input{
+     background: #FFFFFF;
+     border: 0.5px solid #4E5FE3;
+     box-shadow: 0px 4px 20px rgba(181, 188, 234, 0.39);
+     border-radius: 10px;
+}

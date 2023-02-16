@@ -8,3 +8,5 @@ export {default as Partners} from './Partners';
 export {default as WhyUs} from './WhyUs';
 export {default as WhatWeDo} from './WhatWeDo';
 export {default as Feedback} from './Feedback';
+export {default as Giftcard} from './Giftcard';
+export {default as Footer} from './Footer';
