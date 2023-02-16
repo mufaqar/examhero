@@ -9,7 +9,7 @@ const Partners = () => {
           <h2 className='sub-heading text-main text-center mb-6'>Our Partners</h2>
           <div className='bg-light-pink/20 mt-10'>
               <Container>
-                  <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 items-center p-6 gap-10'>
+                  <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 items-center p-8 gap-10'>
                       <div><Image src={P1} width={120} alt="partner"/></div>
                       <div><Image src={P2} width={120} alt="partner"/></div>
                       <div><Image src={P3} width={120} alt="partner"/></div>

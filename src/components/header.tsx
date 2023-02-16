@@ -16,7 +16,7 @@ interface INavItem {
 function Header() {
   
   return (
-    <header className='py-3 bg-white/50 fixed w-full top-0'>
+    <header className='py-3 bg-white/80 fixed w-full top-0 z-50'>
       <Container>
           <div className='flex items-center justify-between'>
             <Logo/>
