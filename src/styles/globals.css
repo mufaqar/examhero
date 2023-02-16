@@ -5,13 +5,13 @@
 
 @layer components{
      .button{
-          @apply bg-main gap-2 text-white flex items-center justify-center p-2 px-4 text-base rounded-xl font-medium
+          @apply bg-main gap-2 text-white flex items-center justify-center p-2 px-4 text-base rounded-xl font-medium hover:bg-light-pink hover:text-black
      }
      .main-heading{
-          @apply md:text-[64px] font-semibold md:leading-[76px] text-4xl sm:text-5xl 
+          @apply md:text-[64px] font-bold md:leading-[76px] text-4xl sm:text-5xl 
      }
      .sub-heading{
-          @apply md:text-5xl font-semibold md:leading-[76px] text-4xl 
+          @apply md:text-5xl font-bold md:leading-[76px] text-4xl 
      }
 }
 

@@ -1,13 +1,12 @@
 import { Container } from "@/constant/imports";
 import Image from "next/image";
 import React from "react";
-import { WhyUsData } from '../../public/DataFiles/whyUs'
-
+import { WhyUsData } from "../../public/DataFiles/whyUs";
 
 interface IWhyUsData {
-     title: string;
-    content: string;
-    imagePath: any;
+  title: string;
+  content: string;
+  imagePath: any;
 }
 
 const WhyUs = () => {
@@ -24,18 +23,24 @@ const WhyUs = () => {
             </p>
           </div>
           <div className="md:w-8/12 grid grid-cols-2 md:grid-cols-3 gap-16">
-               {
-                    WhyUsData.map((why:IWhyUsData,idx:number)=>{
-                         return(
-                             <div>
-                              <figure className="bg-main w-16 h-16 p-3 rounded-xl"><Image src={why.imagePath.src} alt="" width={76} height={76}/></figure>
-                              <h4 className="text-black font-bold text-lg mt-4 mb-1">{why.title}</h4>
-                              <p>{why.content}</p>
-                             </div> 
-                         )
-                    })
-               }
-               
+            {WhyUsData.map((why: IWhyUsData, idx: number) => {
+              return (
+                <div>
+                  <figure className="bg-main w-16 h-16 p-3 rounded-xl">
+                    <Image
+                      src={why.imagePath.src}
+                      alt=""
+                      width={76}
+                      height={76}
+                    />
+                  </figure>
+                  <h4 className="text-black font-bold text-lg mt-4 mb-1">
+                    {why.title}
+                  </h4>
+                  <p>{why.content}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </Container>
