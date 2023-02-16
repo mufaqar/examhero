@@ -25,7 +25,7 @@ const WhyUs = () => {
           <div className="md:w-8/12 grid grid-cols-2 md:grid-cols-3 gap-16">
             {WhyUsData.map((why: IWhyUsData, idx: number) => {
               return (
-                <div>
+                <div key={idx}>
                   <figure className="bg-main w-16 h-16 p-3 rounded-xl">
                     <Image
                       src={why.imagePath.src}
