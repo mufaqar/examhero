@@ -1,4 +1,4 @@
-import { Main, Partners, WhatWeDo, WhyUs } from "@/components/imports";
+import { Feedback, Main, Partners, WhatWeDo, WhyUs } from "@/components/imports";
 import { Container } from "@/constant/imports";
 import Image from "next/image";
 import React from "react";
@@ -90,8 +90,9 @@ const HomeModule = () => {
 
       {/* what we do section  */}
       <WhatWeDo/>
+      {/* feedback section  */}
+      <Feedback/>
 
-      
     </section>
   );
 };

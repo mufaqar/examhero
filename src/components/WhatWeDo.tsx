@@ -14,7 +14,7 @@ interface IWhatWeDo {
 
 const WhatWeDo = () => {
   return (
-    <section className="bg-[url('../../public/images/whatwedo-diamond.png')] bg-no-repeat bg-left-top">
+    <section className="relative bg-[url('../../public/images/whatwedo-diamond.png')] bg-no-repeat bg-left-top pb-28">
       <h2 className="sub-heading font-bold text-center mt-20 text-main">
         What We Do
       </h2>
@@ -23,7 +23,7 @@ const WhatWeDo = () => {
           {WhatwedoData.map((item: IWhatWeDo, idx: number) => {
             return (
               <div className="grid md:grid-cols-2 bxs rounded-xl bg-white">
-                <div className="p-28 relative md:p-36 bg-no-repeat bg-center flex-col bg-cover rounded-t-xl rounded-b-xl" style={{ backgroundImage: `url(${item.image.src})` }}>
+                <div className={`p-28 relative md:p-36 bg-no-repeat bg-center flex-col bg-cover rounded-t-xl rounded-b-xl ${idx%2 === 1 && 'md:order-2'}`} style={{ backgroundImage: `url(${item.image.src})` }}>
                     <button className="button p-3 absolute bottom-10 shadow-xl right-1/2 transform translate-x-1/2 px-6">How It Works <HiOutlineArrowRight/></button>
                 </div>
                 <div className="p-6 px-10">
@@ -35,6 +35,8 @@ const WhatWeDo = () => {
           })}
         </div>
       </Container>
+      <Image src="/images/whatwedo-diamond.png" className="absolute bottom-0 rotate-180 right-0 -z-10" width={900} height={900} alt="bg" />
+      <Image src="/svg/Blur-Gradient.svg" className="absolute top-0 right-0 -z-10" width={500} height={500} alt="bg" />
     </section>
   );
 };
