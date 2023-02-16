@@ -3,8 +3,19 @@
 @tailwind utilities;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600;700;800;900&display=swap');
+@layer components{
+     .button{
+          @apply bg-main gap-2 text-white flex items-center justify-center p-2 px-4 text-base rounded-xl font-medium hover:bg-light-pink hover:text-black
+     }
+     .main-heading{
+          @apply md:text-[64px] font-bold md:leading-[76px] text-4xl sm:text-5xl 
+     }
+     .sub-heading{
+          @apply md:text-5xl font-bold md:leading-[76px] text-4xl 
+     }
+}
 
+<<<<<<< HEAD
 .body{
      font-family: 'Urbanist', sans-serif;
 }
@@ -12,3 +23,62 @@
 .Urbanist{
      font-family: 'Urbanist', sans-serif;
 }
+=======
+@font-face {
+     font-family: Urbanist;
+     src: url('../../public//fonts/Urbanist-Black.ttf');
+     font-weight: 900;
+}
+@font-face {
+     font-family: Urbanist;
+     src: url('../../public//fonts/Urbanist-Bold.ttf');
+     font-weight: bold;
+}
+@font-face {
+     font-family: Urbanist;
+     src: url('../../public//fonts/Urbanist-ExtraBold.ttf');
+     font-weight: 800;
+}
+@font-face {
+     font-family: Urbanist;
+     src: url('../../public//fonts/Urbanist-ExtraLight.ttf');
+     font-weight: 200;
+}
+@font-face {
+     font-family: Urbanist;
+     src: url('../../public//fonts/Urbanist-Light.ttf');
+     font-weight: 300;
+}
+@font-face {
+     font-family: Urbanist;
+     src: url('../../public//fonts/Urbanist-Medium.ttf');
+     font-weight: 500;
+}
+@font-face {
+     font-family: Urbanist;
+     src: url('../../public//fonts/Urbanist-Regular.ttf');
+     font-weight: 400;
+}
+@font-face {
+     font-family: Urbanist;
+     src: url('../../public//fonts/Urbanist-SemiBold.ttf');
+     font-weight: 600;
+}
+
+
+
+*,h1,h2,h3,h4,h5,h6,p{
+     font-family: Urbanist, sans-serif !important;
+}
+.mianbg{
+     background-image: url('../../public/images/main-bg.png');
+     background-position: bottom;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.bxs{
+     box-shadow: 0px 0px 17px 2px rgba(130,130,130,0.16);
+-webkit-box-shadow: 0px 0px 17px 2px rgba(130,130,130,0.16);
+-moz-box-shadow: 0px 0px 17px 2px rgba(130,130,130,0.16);
+}
+>>>>>>> 016f40975ed6f0b8bf26f31c31b59c73a3877c96
