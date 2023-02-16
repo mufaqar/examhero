@@ -6,16 +6,16 @@ import { Container } from '../constant/imports';
 
 function CompanyBanner() {
     return (
-        <section className='pt-24 bg-gradient-to-br from-main/10 via-light-pink/10 to-main/10'>
+        <section className='pt-24 px-4 bg-gradient-to-br from-main/10 via-light-pink/10 to-main/10'>
             <Container>
                 <div className='grid md:grid-cols-2 grid-cols-1 md:gap-16'>
                     <div>
                         <Image src={Company} alt="" />
                     </div>
                     <div>
-                        <div>
-                            <h3 className='md:text-[48px] md:leading-[57px] font-bold Urbanist'>Events</h3>
-                            <h1 className='text-main md:text-[80px] md:leading-[96px] font-bold Urbanist'>E-Mock Test Giveaway Program</h1>
+                        <div className='mb-20'>
+                            <h3 className='md:text-[48px] md:leading-[57px] text-[36px] leading-[48px] font-bold Urbanist'>Events</h3>
+                            <h1 className='text-main md:text-[80px] md:leading-[96px] text-[54px] leading-[66px] font-bold Urbanist'>E-Mock Test Giveaway Program</h1>
                         </div>
                         <Link href="#" className='text-main bg-white border border-main md:text-[28px] md:leading-[33px] font-bold Urbanist px-6 py-2 rounded-[16px] inline-flex float-right'>
                             Learn more

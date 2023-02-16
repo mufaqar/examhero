@@ -1,5 +1,5 @@
 import React from 'react';
-import { CompanyBanner, NewsBox } from '@/components/imports';
+import { CompanyBanner, CompanyNews } from '@/components/imports';
 import {Container} from '../constant/imports';
 
 function Company_Module() {
@@ -7,8 +7,8 @@ function Company_Module() {
     <>
       <CompanyBanner />
       <section>
-        <Container>
-          <NewsBox />
+        <Container>          
+          <CompanyNews />
         </Container>
       </section>
     </>
