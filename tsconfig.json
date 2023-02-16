@@ -19,6 +19,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "public/images/imports.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "public/images/imports.jsx", "src/components/Feedback.jsx"],
   "exclude": ["node_modules"]
 }
