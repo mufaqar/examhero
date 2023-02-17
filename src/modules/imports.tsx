@@ -3,3 +3,4 @@ export {default as Blog_Module} from './blog-module';
 export {default as HomeModule} from './home-module';
 export {default as RegistorModule} from './registor-module';
 export {default as ThankYouModule} from './thankyou-module';
+export {default as ConatactWithUsModule} from './contact-with-us-module';

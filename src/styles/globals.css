@@ -117,4 +117,9 @@ select {
      background-position: right 0.7rem top 50%;
      background-size: 0.65rem auto;
    }
-   
+.contactusbg{
+     background: url('../../public/images/contact-with-us-bg.png');
+     background-position: top;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
