@@ -24,7 +24,7 @@ const Feedback = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  const ref = useRef(null);
+  const ref = useRef<any>(null);
   const handleNextSlide = () => {
     ref.current.slickNext();
   };
@@ -40,7 +40,7 @@ const Feedback = () => {
           <div className="bg-white relative rounded-md p-10 md:w-[60%]">
             <Slider {...settings} ref={ref}>
               {Feedbackdata.map((review, idx) => {
-                var star = [];
+                var star:number[] = [];
                 for (let i = 0; i < review.rating; i++) {
                   star.push(i);
                 }

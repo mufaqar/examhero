@@ -89,3 +89,9 @@
      box-shadow: 0px 4px 20px rgba(181, 188, 234, 0.39);
      border-radius: 10px;
 }
+.footerbg{
+     background-image: url('../../public/images/footer-bg.png');
+     background-position: bottom ;
+     background-repeat: no-repeat;
+     background-size: cover;
+}

@@ -5,15 +5,21 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP } from 'react-icons/
 import {Logo} from './imports'
 import {RxDoubleArrowRight} from 'react-icons/rx'
 
+
+interface ISocial {
+     icon: JSX.Element;
+    link: string;
+}
+
 const Footer = () => {
   return (
-    <footer className='bg-main py-20'>
+    <footer className='footerbg py-28 pb-40'>
           <Container>
-               <div className='grid grid-cols-2 md:grid-cols-4'>
+               <div className='grid grid-cols-2 gap-10 md:grid-cols-4'>
                     <div>
                          <Logo className="border border-white" />
-                         <div className='flex gap-3 mt-10'>
-                              {social.map((item,i)=>{
+                         <div className='flex gap-3 my-10'>
+                              {social.map((item:ISocial,i:number)=>{
                                    return(
                                         <Link href={item.link} className="border-1 border text-white rounded-sm text-xl hover:bg-white hover:text-main border-white p-2" key={i}>{item.icon}</Link>
                                    )
@@ -26,6 +32,23 @@ const Footer = () => {
                          <ul className='mt-6 flex flex-col gap-2'>
                               <li className='text-white item-center'><Link href="#" className='flex items-center gap-1'><RxDoubleArrowRight/>About Us</Link></li>
                               <li className='text-white item-center'><Link href="#" className='flex items-center gap-1'><RxDoubleArrowRight/>Job Opportunity</Link></li>
+                         </ul>
+                    </div>
+                    <div>
+                         <h4 className='text-xl text-white font-semibold'>Customer Services</h4>
+                         <ul className='mt-6 flex flex-col gap-2'>
+                              <li className='text-white item-center'><Link href="#" className='flex items-center gap-1'>Contact Us</Link></li>
+                              <li className='text-white item-center'><Link href="#" className='flex items-center gap-1'>FAQs</Link></li>
+                              <li className='text-white item-center'><Link href="#" className='flex items-center gap-1'>Payment Method</Link></li>
+                         </ul>
+                    </div>
+                    <div>
+                         <h4 className='text-xl text-white font-semibold'>Policy and Law</h4>
+                         <ul className='mt-6 flex flex-col gap-2'>
+                              <li className='text-white item-center'><Link href="#" className='flex items-center gap-1'><RxDoubleArrowRight/>Terms and Conditions</Link></li>
+                              <li className='text-white item-center'><Link href="#" className='flex items-center gap-1'><RxDoubleArrowRight/>Privacy Policy</Link></li>
+                              <li className='text-white item-center'><Link href="#" className='flex items-center gap-1'><RxDoubleArrowRight/>Collection of Personal
+Data Statement</Link></li>
                          </ul>
                     </div>
                </div>
