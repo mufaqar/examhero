@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { BsArrowRightShort } from 'react-icons/bs';
 import { News_One, News_Three, News_Two } from '../../public/images/imports';
 
 function CompanyNews() {
   return (
-    <div className={`py-20 px-4`}>
-      <h2 className='text-main md:text-[60px] md:leading-[72px] text-[42px] leading-[56px] font-bold Urbanist mb-14'>
+    <div className={``}>
+      <h2 className='text-main md:text-[60px] md:leading-[72px] text-[38px] leading-[56px] font-bold Urbanist mb-14'>
         Company News
       </h2>
       <div className='grid md:grid-cols-3 grid-cols-1 md:gap-14 gap-10 mb-14'>        
@@ -27,8 +28,10 @@ function CompanyNews() {
               </div>
               <div>
                 <Link href="#"
-                  className='text-main bg-white md:text-[18px] md:leading-[28px] font-bold Urbanist px-6 py-2 rounded-tl-[16px] float-right hidden group-hover:block'>
-                  {item.linkTxt}
+                  className='text-main bg-white md:text-[18px] md:leading-[28px] font-bold Urbanist px-6 py-2 rounded-tl-[16px] float-right hidden group-hover:block '>
+                  <span className='flex items-center space-x-1'>
+                  {item.linkTxt} <BsArrowRightShort size={28} />
+                  </span>
                 </Link>
               </div>
             </div>
@@ -38,7 +41,7 @@ function CompanyNews() {
       <div>
         <Link href="#"
           className='text-white bg-main hover:bg-main/90 md:text-[18px] md:leading-[28px] font-bold Urbanist px-6 py-2 rounded-[16px] float-right'>
-          Read more
+          Read more 
         </Link>
       </div>
     </div>

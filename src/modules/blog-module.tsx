@@ -7,15 +7,15 @@ import {Blog_Articles} from '../components/imports';
 function Blog_Module() {
     return (
         <>
-            <section className='py-24 px-4 bg-gradient-to-br from-main/10 via-light-pink/10 to-main/10'>
+            <section className='px-4 mianbg md:h-[calc(100vh-87px)] flex flex-col items-center justify-center pt-36 md:pt-[87px]'>
                 <Container>
-                    <div className='mb-24'>
+                    <div className='md:my-24 my-16'>
                         <h3 className='md:text-[48px] md:leading-[57px] text-[36px] leading-[48px] font-bold Urbanist text-center mb-3'>Read more</h3>
                         <p className='md:text-[18px] md:leading-[21px] text-[16px] leading-[21px] font-normal Urbanist text-center'>
                             You may also be interested in this.
                         </p>
                     </div>
-                    <div className='grid md:grid-cols-2 grid-cols-1 gap-16 items-center'>
+                    <div className='grid md:grid-cols-2 grid-cols-1 gap-16 items-center mb-24'>
                         <div className=''>
                             <h2 className='text-[#1D2130] md:text-[48px] md:leading-[57px] text-[36px] leading-[40px] font-bold Urbanist mb-6'>
                                 New invoicing features to help you get paid faster
@@ -33,7 +33,7 @@ function Blog_Module() {
                     </div>
                 </Container>
             </section>
-            <section className='py-14 px-4 bg-gradient-to-b from-light-pink/10 to-white'>
+            <section className='py-14'>
                 <Container>
                     <div className=''>
                         <h3 className='md:text-[48px] md:leading-[57px] text-[36px] leading-[48px] font-bold Urbanist text-center mb-3'>
@@ -42,7 +42,7 @@ function Blog_Module() {
                     </div>
                 </Container>
             </section>
-            <section className='pb-14 px-4'>
+            <section className='pb-14'>
                 <Container>
                     <Blog_Articles />
                 </Container>

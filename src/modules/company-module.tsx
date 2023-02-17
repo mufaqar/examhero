@@ -6,7 +6,7 @@ function Company_Module() {
   return (
     <>
       <CompanyBanner />
-      <section>
+      <section className="py-20 md:py-36 bg-[url('../../public/svg/whyusdiamond.svg')] bg-no-repeat bg-cover">
         <Container>          
           <CompanyNews />
         </Container>
