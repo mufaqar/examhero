@@ -2,7 +2,7 @@ import { Container } from "@/constant/imports";
 import Image from "next/image";
 import React from "react";
 
-const RegistorModule = () => {
+const BookletModule = () => {
   return (
     <main className="md:mt-[87px] registorbg py-[140px]">
       <Container>
@@ -84,20 +84,30 @@ const RegistorModule = () => {
               </div>
               <div className="mt-4 relative">
                 <label className="block mb-2 text-sm text-gray-900 font-semibold">
-                  <span className="text-red-600 text-lg mr-1">*</span>Number of
-                  Learners:
+                  <span className="text-red-600 text-lg mr-1">*</span>Interested Feature:
                 </label>
                 <select
                   id="countries"
                   className="input2 w-full p-4 text-gray-400"
                 >
-                  <option selected >Select</option>
-                  <option value="US">1</option>
-                  <option value="CA">2</option>
-                  <option value="FR">3</option>
-                  <option value="DE">4</option>
+                  <option selected>Select</option>
+                  <option value="1 - 50">1 - 50</option>
+                  <option value="51 - 150">51 - 150</option>
+                  <option value="151 - 250">151 - 250</option>
+                  <option value="251 - 500">251 - 500</option>
+                  <option value="501 - 1,000">501 - 1,000</option>
+                  <option value="1,001 - 5,000">1,001 - 5,000</option>
+                  <option value="1,001 - 5,000">1,001 - 5,000</option>
+                  <option value="5,001 - 25,000">5,001 - 25,000</option>
+                  <option value="25,000+">25,000+</option>
                 </select>
-                <Image src='/images/arrow.png' alt="arrow" className="absolute right-4 bottom-4" width={25} height={25}/>
+                <Image
+                  src="/images/arrow.png"
+                  alt="arrow"
+                  className="absolute right-4 bottom-4"
+                  width={25}
+                  height={25}
+                />
               </div>
               <div className="flex w-full justify-center mt-6">
               <button className="button px-8 mt-4 font-bold p-3">Submit</button>
@@ -111,4 +121,4 @@ const RegistorModule = () => {
   );
 };
 
-export default RegistorModule;
+export default BookletModule;
