@@ -6,15 +6,15 @@ import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import Slider from 'react-slick';
 import { User } from '../../public/images/imports';
 
-// interface IFeedback {
-//   review: string;
-//   user: {
-//     name: string;
-//     designation: string;
-//     image: any;
-//   };
-//   rating: number;
-// }
+interface IFeedback {
+  review: string;
+  user: {
+    name: string;
+    designation: string;
+    image: any;
+  };
+  rating: number;
+}
 
 const Feedback = () => {
   const settings = {
