@@ -9,7 +9,7 @@ export const navItems = [
      },
      {
        name: "Blog sharing",
-       link: "#"
+       link: "/blog"
      },
      {
        name: "Customer Services",
