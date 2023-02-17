@@ -1,11 +1,11 @@
 import { Container } from '@/constant/imports'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 //import {Logo} from './imports'
 import { Logo } from './imports'
 import Link from 'next/link';
 import { navItems } from '../../public/DataFiles/NavItem'
 import { BiSearch, BiUser } from 'react-icons/bi';
-import { HiOutlineMenuAlt3 } from 'react-icons/hi';
+import { HiMenuAlt3 } from 'react-icons/hi';
 
 
 interface INavItem {
@@ -14,13 +14,31 @@ interface INavItem {
 }
 
 function Header() {
+  const [screenWidth, setScreenWidth] = useState<number | null>(null);
+  const [mobileNav, setMobileNav] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setScreenWidth(window.innerWidth);
+      const handleResize = (): void => {
+        const screenWidth = window.innerWidth;
+        setScreenWidth(screenWidth);
+        if (screenWidth >= 768) {
+          setMobileNav(false);
+        }
+      };
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+  
 
   return (
     <header className='py-3 bg-white/80 fixed w-full top-0 z-50'>
       <Container>
         <div className='flex items-center justify-between'>
           <Logo />
-          <nav className={`items-center gap-6 lg:gap-10 hidden md:flex`}>
+          <nav className={`items-center gap-6 lg:gap-10  md:flex ${mobileNav ? 'flex flex-col items-center justify-center p-10 absolute text-white top-[86px] right-0 left-0 bg-main' : 'hidden'}`}>
             {
               navItems.map((nav: INavItem, idx: number) => {
                 return (
@@ -33,7 +51,7 @@ function Header() {
             <button className='p-2 shadow-lg rounded-md'><BiSearch className='text-main' size={20} /></button>
             <button className='button'> <BiUser /> Login / Register</button>
             {/* hamburger  */}
-            <button className='md:hidden'><HiOutlineMenuAlt3 /></button>
+            <button className='md:hidden' onClick={()=>setMobileNav(!mobileNav)}><HiMenuAlt3 size={28}/></button>
           </div>
         </div>
 
