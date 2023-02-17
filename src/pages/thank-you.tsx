@@ -1,14 +1,17 @@
-import {ThankYouModule} from '@/modules/imports'
-import Head from 'next/head'
-import React from 'react'
+import { ThankYouModule } from "@/modules/imports";
+import Head from "next/head";
+import React from "react";
 
 const ThankYou = () => {
   return (
-     <Head>
-          <title>Thank You!</title>
-     </Head>
-    <div><ThankYouModule/></div>
-  )
-}
+    <>
+      <Head>
+        <title>Thank You!</title>
+      </Head>
 
-export default ThankYou
+      <ThankYouModule />
+    </>
+  );
+};
+
+export default ThankYou;
