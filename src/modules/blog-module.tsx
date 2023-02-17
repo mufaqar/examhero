@@ -7,9 +7,9 @@ import {Blog_Articles} from '../components/imports';
 function Blog_Module() {
     return (
         <>
-            <section className='px-4 mianbg md:h-[calc(100vh-87px)] flex flex-col items-center justify-center pt-36 md:pt-[87px]'>
+            <section className='px-4 mianbg flex flex-col items-center justify-center pt-36 md:pt-[87px]'>
                 <Container>
-                    <div className='md:my-24 my-16'>
+                    <div className='my-16'>
                         <h3 className='md:text-[48px] md:leading-[57px] text-[36px] leading-[48px] font-bold Urbanist text-center mb-3'>Read more</h3>
                         <p className='md:text-[18px] md:leading-[21px] text-[16px] leading-[21px] font-normal Urbanist text-center'>
                             You may also be interested in this.

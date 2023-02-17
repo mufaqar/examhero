@@ -7,9 +7,9 @@ import Link from 'next/link';
 function Program_Module() {
     return (
         <>
-            <section className='mianbg md:h-[calc(100vh-87px)] flex flex-col items-center justify-center pt-36 md:pt-[87px]'>
+            <section className='mianbg flex flex-col items-center justify-center pt-36 md:pt-[87px]'>
                 <Container>
-                    <div className='md:my-24 my-16'>
+                    <div className='my-16'>
                         <h2 className='text-[#1D2130] md:text-[48px] md:leading-[57px] text-[36px] leading-[40px] font-bold Urbanist text-center mb-6'>
                             E-book and Mock Test Giveaway Program
                         </h2>

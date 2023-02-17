@@ -6,9 +6,9 @@ import { Container } from '../constant/imports';
 
 function CompanyBanner() {
     return (
-        <section className='px-4 mianbg md:h-[calc(100vh-87px)] flex flex-col items-center justify-center pt-36 md:pt-[87px]'>
+        <section className='px-4 mianbg flex flex-col items-center justify-center pt-36 md:pt-[87px]'>
             <Container>
-                <div className='grid md:grid-cols-2 grid-cols-1 md:gap-16 gap-10 items-center'>
+                <div className='grid md:grid-cols-2 grid-cols-1 md:gap-16 gap-10 items-center mt-16'>
                     <div>
                         <Image src={Company} alt="" />
                     </div>
