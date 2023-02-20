@@ -37,11 +37,10 @@ function Header() {
         <div className="flex items-center justify-between">
           <Logo />
           <nav
-            className={`items-center gap-6 lg:gap-10  md:flex ${
-              mobileNav
-                ? "flex flex-col items-center justify-center p-10 absolute text-white top-[86px] right-0 left-0 bg-main"
-                : "hidden"
-            }`}
+            className={`items-center gap-6 lg:gap-10  md:flex ${mobileNav
+              ? "flex flex-col items-center justify-center p-10 absolute text-white top-[86px] right-0 left-0 bg-main"
+              : "hidden"
+              }`}
           >
             {navItems.map((nav: INavItem, idx: number) => {
               return (
@@ -60,8 +59,8 @@ function Header() {
               <BiSearch className="text-main" size={20} />
             </button>
             <button className="button">
-              {" "}
-              <BiUser /> Login / Register
+
+              <BiUser /><Link href="/subscription"> Login / Register</Link>
             </button>
             {/* hamburger  */}
             <button
