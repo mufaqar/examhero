@@ -14,7 +14,7 @@ interface IWhatWeDo {
 
 const WhatWeDo = () => {
   return (
-    <section className="relative bg-[url('../../public/images/whatwedo-diamond.png')] bg-no-repeat bg-left-top pb-28">
+    <section className="relative bg-[url('../../public/images/whatwedo-diamond.png')] bg-no-repeat bg-left-top pb-28" id="services">
       <h2 className="sub-heading font-bold text-center mt-20 text-main">
         What We Do
       </h2>
