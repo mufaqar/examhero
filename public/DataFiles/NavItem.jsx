@@ -13,7 +13,7 @@ export const navItems = [
   },
   {
     name: 'Customer Services',
-    link: '#',
+    link: '/contact-with-us',
   },
   {
     name: 'Download ExamHero App',
