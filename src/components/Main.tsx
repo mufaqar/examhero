@@ -6,7 +6,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 const Main = () => {
   return (
-    <main className="md:h-[calc(100vh-87px)] max-h-[650px] mianbg flex flex-col items-center justify-center mt-36 md:mt-[87px]">
+    <main className=" mianbg flex flex-col items-center justify-center pt-36 pb-20">
       <Container small={true}>
         <section className="grid md:grid-cols-2 gap-20 justify-between items-center">
           <div>
