@@ -103,7 +103,7 @@ const Feedback = () => {
               <div className="max-w-[160px]">
                 <h4 className="font-semibold text-2xl">90%</h4>
                 <p className="text-main font-light mt-2">
-                  Students Complete Course Successfully{' '}
+                  Students complete course successfully{' '}
                 </p>
               </div>
               <div className="max-w-[160px]">

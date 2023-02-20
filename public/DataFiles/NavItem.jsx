@@ -4,11 +4,11 @@ export const navItems = [
        link: "#"
      },
      {
-       name: "Events And News",
+       name: "Events and News",
        link: "#"
      },
      {
-       name: "Blog sharing",
+       name: "Blog Sharing",
        link: "/blog"
      },
      {

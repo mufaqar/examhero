@@ -10,12 +10,12 @@ const Main = () => {
       <Container small={true}>
         <section className="grid md:grid-cols-2 gap-20 justify-between items-center">
           <div>
-            <span className="font-semibold text-main uppercase">Better Learning Future With Us</span>
+            <span className="font-semibold text-main uppercase">CREATE A BETTER LEARNING FUTURE WITH US</span>
             <h1 className="main-heading">The Largest AI Education Platform in Hong Kong and Macau</h1>
             <p className="text-gray-600 leading-8 font-normal">
               ExamHero is an enterprise that solves learning problems with
               artificial intelligence (AI) systems. We insist on continuously
-              bringing users better learning and using experience, creating the
+              bringing users better learning and using experiences, creating the
               best learning results, and are committed to making high-quality
               education within easy reach, learning and evaluation.
             </p>

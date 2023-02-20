@@ -50,7 +50,7 @@ const HomeModule = () => {
             <p className="text-center">
               To be the best partner for users on the road to success. Core
               Values: Professionalism, Integrity, Innovation, Cultivation,
-              Personalized Learning, Mutual Achievement
+              Personalized Learning, Mutual Achievement.
             </p>
           </div>
           <div className="flex flex-col items-center justify-center bxs rounded-2xl p-6 px-10">
@@ -60,8 +60,8 @@ const HomeModule = () => {
             <p className="text-center">
               Use artificial intelligence to promote educational reform and
               innovation, break the current limitations of educational
-              evaluation and personalized learning, and give everyone the
-              opportunity to experience high-quality education.
+              evaluation and personalized learning, and allow
+              everyone to experience high-quality education.
             </p>
           </div>
         </section>
@@ -74,13 +74,13 @@ const HomeModule = () => {
         <div className="bg-light-pink/20 mt-10">
           <Container small={true}>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 items-center py-12 gap-10">
-            {StatsData.map((item:IStats, idx:number) => {
-                return(
+              {StatsData.map((item: IStats, idx: number) => {
+                return (
                   <div key={idx} className="flex flex-col items-center justify-center">
-                  <Image src={item.icon.src} width={40} height={40} alt={item.title} />
-                  <h3 className="sub-heading font-bold leading-10 text-main mt-5">{item.stats}</h3>
-                  <p className="text-main font-medium mt-2">{item.title}</p>
-                </div>
+                    <Image src={item.icon.src} width={40} height={40} alt={item.title} />
+                    <h3 className="sub-heading font-bold leading-10 text-main mt-5">{item.stats}</h3>
+                    <p className="text-main font-medium mt-2">{item.title}</p>
+                  </div>
                 )
               })}
             </div>
@@ -89,12 +89,12 @@ const HomeModule = () => {
       </section>
 
       {/* what we do section  */}
-      <WhatWeDo/>
+      <WhatWeDo />
       {/* feedback section  */}
-      <Feedback/>
+      <Feedback />
       {/* giftacard section  */}
-      <Giftcard/>
-      
+      <Giftcard />
+
     </section>
   );
 };

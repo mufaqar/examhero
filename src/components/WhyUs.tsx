@@ -19,7 +19,7 @@ const WhyUs = () => {
             <p className="text-[#1C5278] mt-8">
               ExamHero is an enterprise that solves learning problems with
               artificial intelligence (AI) systems. We insist on continuously
-              bringing users better learning and using experience,
+              bringing users better learning and using experiences,
             </p>
           </div>
           <div className="md:w-8/12 grid grid-cols-2 md:grid-cols-3 gap-16">

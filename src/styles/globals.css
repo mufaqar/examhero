@@ -94,6 +94,14 @@
      box-shadow: 0px 4px 20px rgba(181, 188, 234, 0.39);
      border-radius: 10px;
 }
+
+.selectType{
+     background-image: url('../../public/images/arrow.png');
+     background-size: 5%;
+     box-shadow: 0px 4px 20px rgba(181, 188, 234, 0.39);
+     border-radius: 10px;
+     cursor: pointer;
+}
 .footerbg{
      background-image: url('../../public/images/footer-bg.png');
      background-position: bottom ;

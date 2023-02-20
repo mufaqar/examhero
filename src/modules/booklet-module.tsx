@@ -88,7 +88,7 @@ const BookletModule = () => {
                 </label>
                 <select
                   id="countries"
-                  className="input2 w-full p-4 text-gray-400"
+                  className="selectType w-full p-4 text-gray-400"
                 >
                   <option selected>Select</option>
                   <option value="1 - 50">1 - 50</option>
@@ -101,13 +101,13 @@ const BookletModule = () => {
                   <option value="5,001 - 25,000">5,001 - 25,000</option>
                   <option value="25,000+">25,000+</option>
                 </select>
-                <Image
+                {/* <Image
                   src="/images/arrow.png"
                   alt="arrow"
                   className="absolute right-4 bottom-4"
                   width={25}
                   height={25}
-                />
+                /> */}
               </div>
               <div className="flex w-full justify-center mt-6">
               <button className="button px-8 mt-4 font-bold p-3">Submit</button>

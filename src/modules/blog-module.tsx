@@ -21,7 +21,7 @@ function Blog_Module() {
                                 New invoicing features to help you get paid faster
                             </h2>
                             <p className='text-[#6D6E76] md:text-[16px] md:leading-[24px] text-[16px] leading-[21px] font-normal Urbanist mb-8'>
-                                Over the past few months, we’ve added several new features to SaaS Invoicing to help any business get paid faster and streamline their collection workflows.
+                                Over the past few months, we’ve added several new features to SaaS invoicing to help any business get paid faster and streamline their collection workflows.
                             </p>
                             <p className='text-[#1D2130] md:text-[16px] md:leading-[24px] text-[1spx] leading-[21px] font-medium Urbanist'>
                                 Luke Matthews l  November 8, 2021

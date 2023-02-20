@@ -76,7 +76,7 @@ const ConatactWithUsModule = () => {
                 </label>
                 <select
                   id="countries"
-                  className="input2 w-full p-4 text-gray-400"
+                  className="selectType w-full p-4 text-gray-400"
                 >
                   <option selected>Select</option>
                   <option value="E-mock exam and intelligent evaluation system">E-mock exam and intelligent evaluation system </option>
@@ -84,13 +84,13 @@ const ConatactWithUsModule = () => {
                   <option value="Intelligent adaptive learning platform">Intelligent adaptive learning platform</option>
                   <option value="Intelligent adaptive learning platform">Comprehelp - AI question generator</option>
                 </select>
-                <Image
+                {/* <Image
                   src="/images/arrow.png"
                   alt="arrow"
                   className="absolute right-4 bottom-4"
                   width={25}
                   height={25}
-                />
+                /> */}
               </div>
               <div className="mt-4 relative">
                 <label className="block mb-2 text-sm text-gray-900 font-semibold">
@@ -98,7 +98,7 @@ const ConatactWithUsModule = () => {
                 </label>
                 <select
                   id="countries"
-                  className="input2 w-full p-4 text-gray-400"
+                  className="selectType w-full p-4 text-gray-400"
                 >
                   <option selected>Select</option>
                   <option value="1 - 50">1 - 50</option>
@@ -111,13 +111,13 @@ const ConatactWithUsModule = () => {
                   <option value="5,001 - 25,000">5,001 - 25,000</option>
                   <option value="25,000+">25,000+</option>
                 </select>
-                <Image
+                {/* <Image
                   src="/images/arrow.png"
                   alt="arrow"
                   className="absolute right-4 bottom-4"
                   width={25}
                   height={25}
-                />
+                /> */}
               </div>
           </div>
           <div className="mt-6 md:mt-0">
