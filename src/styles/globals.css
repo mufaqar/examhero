@@ -13,6 +13,9 @@
      .sub-heading{
           @apply md:text-5xl font-bold md:leading-[76px] text-4xl 
      }
+     .nth_class{
+          @apply [&:nth-child(2)>div>button]:md:left-0 [&:nth-child(2)>div>button]:left-[-90px] [&:nth-child(2)>div>button]:right-auto [&:nth-child(2)>div>button]:md:bottom-14 [&:nth-child(2)>div>button]:bottom-10 [&:nth-child(4)>div>button]:bottom-auto [&:nth-child(4)>div>button]:md:top-24 [&:nth-child(4)>div>button]:top-20 [&:nth-child(4)>div>button]:right-1/3
+     }
 }
 
 .body{
