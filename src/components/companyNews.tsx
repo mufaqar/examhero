@@ -66,7 +66,7 @@ export const News_datas = [
     feature: News_Two,
   },
   {
-    title: "JAE E-book benefited thousand five students.",
+    title: "JAE E-book benefited thousand five thousand.",
     content: " Last year, there were about 4,700 candidates for the Joint Examination of the Four Macao Universities. The book donation program helped about 30% of the candidates prepare for the exam.",
     publish: "Hong Kong 2020/04/03",
     linkTxt: "Learn More",

@@ -12,7 +12,7 @@ const BookletModule = () => {
           <div>
             <h3 className="sub-heading text-main">Want to Know More?</h3>
             <p className="max-w-[320px] mt-4 text-xl font-bold">
-              You will get a free booklet of our popular products!
+              You will get a free booklet of our popular program!
             </p>
             <Image
               src="/images/registor-left.png"
@@ -92,15 +92,10 @@ const BookletModule = () => {
                   className="selectType w-full p-4 text-gray-400"
                 >
                   <option selected>Select</option>
-                  <option value="1 - 50">1 - 50</option>
-                  <option value="51 - 150">51 - 150</option>
-                  <option value="151 - 250">151 - 250</option>
-                  <option value="251 - 500">251 - 500</option>
-                  <option value="501 - 1,000">501 - 1,000</option>
-                  <option value="1,001 - 5,000">1,001 - 5,000</option>
-                  <option value="1,001 - 5,000">1,001 - 5,000</option>
-                  <option value="5,001 - 25,000">5,001 - 25,000</option>
-                  <option value="25,000+">25,000+</option>
+                  <option value="E-mock exam and intelligent evaluation system">E-mock exam and intelligent evaluation system </option>
+                  <option value="Intelligent school-based e-learning resource library">Intelligent school-based e-learning resource library</option>
+                  <option value="Intelligent adaptive learning platform">Intelligent adaptive learning platform</option>
+                  <option value="Intelligent adaptive learning platform">Comprehelp - AI question generator</option>
                 </select>
                 {/* <Image
                   src="/images/arrow.png"
