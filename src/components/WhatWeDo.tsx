@@ -3,9 +3,6 @@ import Image from "next/image";
 import React from "react";
 import { W1, W2, W3, W4 } from "../../public/images/imports";
 import { HiOutlineArrowRight } from 'react-icons/hi';
-import { motion, Variants } from "framer-motion";
-import { fadeUp } from "@/animation";
-
 
 interface IWhatWeDo {
   image: any;
@@ -16,18 +13,11 @@ interface IWhatWeDo {
 
 const WhatWeDo = () => {
   return (
-    <motion.section
-      initial={"offscreen"}
-      whileInView={"onscreen"}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ staggerChildren: 0.5 }}
-      className="relative bg-[url('../../public/images/whatwedo-diamond.png')] bg-no-repeat bg-left-top pb-28" id="services">
-      <motion.h2
-        variants={fadeUp}
-        className="sub-heading font-bold text-center mt-20 text-main">
+    <section className="relative bg-[url('../../public/images/whatwedo-diamond.png')] bg-no-repeat bg-left-top pb-28" id="services">
+      <h2 className="sub-heading font-bold text-center mt-20 text-main">
         What We Do
-      </motion.h2>
-      <motion.div variants={fadeUp}>
+      </h2>
+      <div>
         <Container>
           <div className="mt-20 flex flex-col gap-20">
             {WhatwedoData.map((item: IWhatWeDo, idx: number) => {
@@ -45,10 +35,10 @@ const WhatWeDo = () => {
             })}
           </div>
         </Container>
-      </motion.div>
+      </div>
       <Image src="/images/whatwedo-diamond.png" className="absolute bottom-0 rotate-180 right-0 -z-10" width={900} height={900} alt="bg" />
       <Image src="/svg/Blur-Gradient.svg" className="absolute top-0 right-0 -z-10" width={500} height={500} alt="bg" />
-    </motion.section>
+    </section>
   );
 };
 

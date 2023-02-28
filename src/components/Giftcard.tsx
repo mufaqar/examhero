@@ -1,21 +1,12 @@
 import Container from "@/constant/Container";
 import Image from "next/image";
 import React from "react";
-import { motion, Variants } from "framer-motion";
-import { fadeUp } from "@/animation"
 
 const Giftcard = () => {
   return (
-    <motion.section
-      initial={"offscreen"}
-      whileInView={"onscreen"}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ staggerChildren: 0.5 }}
-      className='py-20 bg-no-repeat bg-cover bg-[url("../../public/images/giftard-bg.png")]'>
+    <section className='py-20 bg-no-repeat bg-cover bg-[url("../../public/images/giftard-bg.png")]'>
       <Container>
-        <motion.div
-          variants={fadeUp}
-          className="grid md:grid-cols-2 items-center">
+        <div className="grid md:grid-cols-2 items-center">
           {/* Redeem Gift Card */}
           <div>
             <h3 className="sub-heading text-main">Redeem Gift Card</h3>
@@ -67,11 +58,9 @@ const Giftcard = () => {
               </button>
             </form>
           </div>
-        </motion.div>
+        </div>
         {/* Download ExamHero App  */}
-        <motion.div
-          variants={fadeUp}
-          className="mt-28 md:mt-60 md:mb-40 mb-10">
+        <div className="mt-28 md:mt-60 md:mb-40 mb-10">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h3 className="sub-heading text-main">Download ExamHero App </h3>
@@ -101,9 +90,9 @@ const Giftcard = () => {
               </form>
             </div>
           </div>
-        </motion.div>
+        </div>
       </Container>
-    </motion.section>
+    </section>
   );
 };
 
