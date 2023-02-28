@@ -3,6 +3,8 @@ import { Container } from "@/constant/imports";
 import Image from "next/image";
 import React from "react";
 import { Benefit, Ebook, Mockpaper, SchoolUse } from "../../public/svg/imports";
+import { motion, Variants } from "framer-motion";
+import { fadeUp } from "@/animation";
 
 const StatsData = [
   {
@@ -17,7 +19,7 @@ const StatsData = [
   },
   {
     stats: "8000+",
-    title: "mock papers Distributed",
+    title: "mock papers distributed",
     icon: Mockpaper,
   },
   {
@@ -38,39 +40,50 @@ const HomeModule = () => {
     <section>
       <Main />
       {/* our mission & vission */}
-      <h2 className="sub-heading text-main text-center mb-6">
-        Our Mission and Vision
-      </h2>
-      <Container small={true}>
-        <section className="grid md:grid-cols-2 gap-12 md:gap-20 my-16 mb-24">
-          <div className="flex flex-col items-center justify-center bxs rounded-2xl p-6 px-10">
-            <h3 className="font-bold text-3xl md:text-[32px] text-black mb-4">
-              Mission
-            </h3>
-            <p className="text-center">
-              To be the best partner for users on the road to success. Core
-              Values: Professionalism, Integrity, Innovation, Cultivation,
-              Personalized Learning, Mutual Achievement.
-            </p>
-          </div>
-          <div className="flex flex-col items-center justify-center bxs rounded-2xl p-6 px-10">
-            <h3 className="font-bold text-3xl md:text-[32px] text-black mb-4">
-              Vision
-            </h3>
-            <p className="text-center">
-              Use artificial intelligence to promote educational reform and
-              innovation, break the current limitations of educational
-              evaluation and personalized learning, and allow
-              everyone to experience high-quality education.
-            </p>
-          </div>
-        </section>
-      </Container>
+      <motion.div
+        initial={"offscreen"}
+        whileInView={"onscreen"}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ staggerChildren: 0.5 }}
+      >
+        <motion.h2
+          variants={fadeUp}
+          className="sub-heading text-main text-center mb-6">
+          Our Mission and Vision
+        </motion.h2>
+        <Container small={true}>
+          <motion.section
+            variants={fadeUp}
+            className="grid md:grid-cols-2 gap-12 md:gap-20 my-16 mb-24">
+            <div className="flex flex-col items-center justify-center bxs rounded-2xl p-6 px-10">
+              <h3 className="font-bold text-3xl md:text-[32px] text-black mb-4">
+                Mission
+              </h3>
+              <p className="text-center">
+                To be the best partner for users on the road to success. Core
+                Values: Professionalism, Integrity, Innovation, Cultivation,
+                Personalized Learning, Mutual Achievement.
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center bxs rounded-2xl p-6 px-10">
+              <h3 className="font-bold text-3xl md:text-[32px] text-black mb-4">
+                Vision
+              </h3>
+              <p className="text-center">
+                Use artificial intelligence to promote educational reform and
+                innovation, break the current limitations of educational
+                evaluation and personalized learning, and allow
+                everyone to experience high-quality education.
+              </p>
+            </div>
+          </motion.section>
+        </Container>
+      </motion.div>
       {/* partners section  */}
       <Partners />
       <WhyUs />
       {/* stats section */}
-      <section>
+      <section >
         <div className="bg-light-pink/20 mt-10">
           <Container small={true}>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 items-center py-12 gap-10">

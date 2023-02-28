@@ -15,9 +15,11 @@ function CompanyBanner() {
                     <div>
                         <div className='mb-20'>
                             <h3 className='md:text-[48px] md:leading-[57px] text-[36px] leading-[48px] font-bold Urbanist'>Events</h3>
-                            <h1 className='text-main md:text-[80px] md:leading-[96px] text-[52px] leading-[50px] font-bold Urbanist'>E-Mock Test Giveaway Program</h1>
+                            <h1 className='text-main md:text-[80px] md:leading-[96px] text-[52px] leading-[50px] font-bold Urbanist'>
+                            E-Mock Gifting Program
+                            </h1>
                         </div>
-                        <Link href="#" className='text-main bg-white border border-main md:text-[28px] md:leading-[33px] font-bold Urbanist px-6 py-2 rounded-[16px] inline-flex float-right'>
+                        <Link href="/program-detail" className='text-main bg-white border border-main md:text-[28px] md:leading-[33px] font-bold Urbanist px-6 py-2 rounded-[16px] inline-flex float-right'>
                             Learn more
                         </Link>
                     </div>

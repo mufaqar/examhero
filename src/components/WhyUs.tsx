@@ -2,6 +2,8 @@ import { Container } from "@/constant/imports";
 import Image from "next/image";
 import React from "react";
 import { WhyUsData } from "../../public/DataFiles/whyUs";
+import { motion, Variants } from "framer-motion";
+import { fadeUp } from "@/animation";
 
 interface IWhyUsData {
   title: string;
@@ -10,10 +12,18 @@ interface IWhyUsData {
 }
 
 const WhyUs = () => {
+
   return (
-    <section className="my-20 md:my-36 bg-[url('../../public/svg/whyusdiamond.svg')] bg-no-repeat bg-contain bg-left-top md:bg-left">
+    <motion.section
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+      className="my-20 md:my-36 bg-[url('../../public/svg/whyusdiamond.svg')] bg-no-repeat bg-contain bg-left-top md:bg-left">
       <Container>
-        <div className="md:flex gap-20 items-center ">
+        <motion.div
+          variants={fadeUp}
+          className="md:flex gap-20 items-center ">
           <div className="md:w-4/12 mb-16 md:mb-0">
             <h2 className="main-heading font-bold text-main">Why Us?</h2>
             <p className="text-[#1C5278] mt-8">
@@ -42,9 +52,9 @@ const WhyUs = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
       </Container>
-    </section>
+    </motion.section>
   );
 };
 

@@ -5,6 +5,8 @@ import { FaStar } from 'react-icons/fa';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import Slider from 'react-slick';
 import { User } from '../../public/images/imports';
+import { motion, Variants } from "framer-motion";
+import { fadeUp } from "@/animation"
 
 interface IFeedback {
   review: string;
@@ -34,13 +36,20 @@ const Feedback = () => {
   };
 
   return (
-    <section className="feedbackBg mt-4 py-28">
+    <motion.section
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+      className="feedbackBg mt-4 py-28">
       <Container small={true}>
-        <div className="md:flex gap-10 lg:gap-20 ">
+        <motion.div 
+        variants={fadeUp}
+         className="md:flex gap-10 lg:gap-20 ">
           <div className="bg-white relative rounded-md p-10 md:w-[60%]">
             <Slider {...settings} ref={ref}>
               {Feedbackdata.map((review, idx) => {
-                var star:number[] = [];
+                var star: number[] = [];
                 for (let i = 0; i < review.rating; i++) {
                   star.push(i);
                 }
@@ -114,9 +123,9 @@ const Feedback = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </Container>
-    </section>
+    </motion.section>
   );
 };
 

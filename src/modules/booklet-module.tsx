@@ -1,5 +1,6 @@
 import { Container } from "@/constant/imports";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const BookletModule = () => {
@@ -110,7 +111,7 @@ const BookletModule = () => {
                 /> */}
               </div>
               <div className="flex w-full justify-center mt-6">
-              <button className="button px-8 mt-4 font-bold p-3">Submit</button>
+              <Link href="/thank-you" className="button px-8 mt-4 font-bold p-3">Submit</Link>
               </div>
               
             </form>

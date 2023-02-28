@@ -66,7 +66,7 @@ function Program_Module() {
                                 </p>
                             </div>
                             <div>
-                                <Link href="#" className='text-white bg-main border border-main hover:bg-main/80 hover:border-main/80 md:text-[49px] md:leading-[90px] text-[26px] leading-[42px] font-bold Urbanist px-3 py-2 rounded-[26px] text-center block mb-16'>
+                                <Link href="/booklet" className='text-white bg-main border border-main hover:bg-main/80 hover:border-main/80 md:text-[49px] md:leading-[90px] text-[26px] leading-[42px] font-bold Urbanist px-3 py-2 rounded-[26px] text-center block mb-16'>
                                     Download Free Booklet
                                 </Link>
                                 <p className='text-black w-full md:text-[26px] md:leading-[28.6px] text-[18px] leading-[24px] font-semibold Urbanist md:text-right mt-16'>

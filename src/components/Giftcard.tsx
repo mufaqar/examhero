@@ -1,12 +1,21 @@
 import Container from "@/constant/Container";
 import Image from "next/image";
 import React from "react";
+import { motion, Variants } from "framer-motion";
+import { fadeUp } from "@/animation"
 
 const Giftcard = () => {
   return (
-    <section className='py-20 bg-no-repeat bg-cover bg-[url("../../public/images/giftard-bg.png")]'>
+    <motion.section
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+      className='py-20 bg-no-repeat bg-cover bg-[url("../../public/images/giftard-bg.png")]'>
       <Container>
-        <div className="grid md:grid-cols-2 items-center">
+        <motion.div
+          variants={fadeUp}
+          className="grid md:grid-cols-2 items-center">
           {/* Redeem Gift Card */}
           <div>
             <h3 className="sub-heading text-main">Redeem Gift Card</h3>
@@ -58,19 +67,21 @@ const Giftcard = () => {
               </button>
             </form>
           </div>
-        </div>
+        </motion.div>
         {/* Download ExamHero App  */}
-        <div className="mt-28 md:mt-60 md:mb-40 mb-10">
+        <motion.div
+          variants={fadeUp}
+          className="mt-28 md:mt-60 md:mb-40 mb-10">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h3 className="sub-heading text-main">Download ExamHero App </h3>
-              <Image src="/svg/apple-btn.svg" className="mt-10 hover:shadow-lg rounded-[28px] cursor-pointer hover:scale-105 transition-all duration-200" alt="apple" width={400} height={141}/>
-              <Image src="/svg/andriod-btn.svg" className="mt-8 hover:shadow-lg rounded-[28px] cursor-pointer hover:scale-105 transition-all duration-200" alt="apple" width={400} height={141}/>
+              <Image src="/svg/apple-btn.svg" className="mt-10 hover:shadow-lg rounded-[28px] cursor-pointer hover:scale-105 transition-all duration-200" alt="apple" width={400} height={141} />
+              <Image src="/svg/andriod-btn.svg" className="mt-8 hover:shadow-lg rounded-[28px] cursor-pointer hover:scale-105 transition-all duration-200" alt="apple" width={400} height={141} />
             </div>
             <div>
               <form>
                 <div className="flex flex-col justify-center items-center ">
-                <h3 className="sub-heading text-center text-main text-3xl">
+                  <h3 className="sub-heading text-center text-main text-3xl">
                     Subscribe Us
                   </h3>
                   <p className="max-w-[320px] text-center mt-4">
@@ -83,16 +94,16 @@ const Giftcard = () => {
                     placeholder="email address.."
                     required
                   />
-                   <button className="button mt-6 p-3 px-10 items-center">Subscribe</button>
+                  <button className="button mt-6 p-3 px-10 items-center">Subscribe</button>
                 </div>
-               
-                
+
+
               </form>
             </div>
           </div>
-        </div>
+        </motion.div>
       </Container>
-    </section>
+    </motion.section>
   );
 };
 
