@@ -3,15 +3,25 @@ import Link from 'next/link';
 import React from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import { News_One, News_Three, News_Two } from '../../public/images/imports';
+import { motion, Variants } from "framer-motion";
+import { fadeUp } from "@/animation";
 
 function CompanyNews() {
   return (
-    <div className={``}>
-      <h2 className='text-main md:text-[60px] md:leading-[72px] text-[38px] leading-[56px] font-bold Urbanist mb-14'>
+    <motion.div
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}>
+      <motion.h2
+        variants={fadeUp}
+        className='text-main md:text-[60px] md:leading-[72px] text-[38px] leading-[56px] font-bold Urbanist mb-14'>
         Company News
-      </h2>
-      <div className='grid md:grid-cols-3 grid-cols-1 md:gap-14 gap-10 mb-14'>        
-        {News_datas.map((item,index) => (
+      </motion.h2>
+      <motion.div 
+      variants={fadeUp}
+      className='grid md:grid-cols-3 grid-cols-1 md:gap-14 gap-10 mb-14'>
+        {News_datas.map((item, index) => (
           <div key={index} className='h-[530px] relative bg-gradient-to-b from-[#2D2D2D] to-[#525FE1] rounded-[16px] group transition-all ease-in-out'>
             <Image src={item.feature} alt="" className='object-cover w-full h-full rounded-[16px] opacity-80 group-hover:opacity-60' />
             <div className=' absolute bottom-0'>
@@ -30,21 +40,21 @@ function CompanyNews() {
                 <Link href="#"
                   className='text-main bg-white md:text-[18px] md:leading-[28px] font-bold Urbanist px-6 py-2 rounded-tl-[16px] float-right hidden group-hover:block '>
                   <span className='flex items-center space-x-1'>
-                  {item.linkTxt} <BsArrowRightShort size={28} />
+                    {item.linkTxt} <BsArrowRightShort size={28} />
                   </span>
                 </Link>
               </div>
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
       <div>
         <Link href="#"
           className='text-white bg-main hover:bg-main/90 md:text-[18px] md:leading-[28px] font-bold Urbanist px-6 py-2 rounded-[16px] float-right'>
-          Read more 
+          Read more
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

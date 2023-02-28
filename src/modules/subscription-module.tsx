@@ -1,14 +1,22 @@
 import { Container } from "@/constant/imports";
 import Image from "next/image";
 import React from "react";
+import { motion, Variants } from "framer-motion";
+import { fadeUp } from "@/animation";
 
 const SubscriptionModule = () => {
   return (
-    <main className="md:mt-[87px] registorbg py-[140px]">
+    <motion.main
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+      className="md:mt-[87px] registorbg py-[140px]">
       <Container>
         <div className="grid md:grid-cols-2 gap-10 md:gap-28 items-center">
           {/* Redeem Gift Card */}
-          <div>
+          <motion.div 
+          variants={fadeUp}>
             <h3 className="sub-heading md:leading-[65px] text-main">
               Want to Stay Updated? Subscribe Us
             </h3>
@@ -21,7 +29,7 @@ const SubscriptionModule = () => {
               width={500}
               height={500}
             />
-          </div>
+          </motion.div>
           <div className="mt-6 md:mt-0">
             <form>
               <div className="grid md:grid-cols-2 md:gap-8">
@@ -116,7 +124,7 @@ const SubscriptionModule = () => {
           </div>
         </div>
       </Container>
-    </main>
+    </motion.main>
   );
 };
 

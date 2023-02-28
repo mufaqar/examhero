@@ -3,18 +3,29 @@ import { Program1, Program2, ProgramHero } from 'public/images/imports';
 import React from 'react';
 import { Container } from '../constant/imports';
 import Link from 'next/link';
+import { motion, Variants } from "framer-motion";
+import { fadeUp } from "@/animation";
 
 function Program_Module() {
     return (
         <>
-            <section className='mianbg flex flex-col items-center justify-center pt-36 md:pt-[87px]'>
+            <motion.section
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ staggerChildren: 0.5 }}
+                className='mianbg flex flex-col items-center justify-center pt-36 md:pt-[87px]'>
                 <Container>
-                    <div className='my-16'>
+                    <motion.div
+                    variants={fadeUp}
+                     className='my-16'>
                         <h2 className='text-[#1D2130] md:text-[48px] md:leading-[57px] text-[36px] leading-[40px] font-bold Urbanist text-center mb-6'>
                             E-book and Mock Test Giveaway Program
                         </h2>
-                    </div>
-                    <div className='items-center md:mb-24 '>
+                    </motion.div>
+                    <motion.div 
+                    variants={fadeUp}
+                    className='items-center md:mb-24 '>
                         <div className='relative h-[318px] rounded-[17px]'>
                             <Image src={ProgramHero} alt="" className='object-cover h-full wfull rounded-[17px]' />
                             <div className='absolute top-[40%] left-0 right-0'>
@@ -23,9 +34,9 @@ function Program_Module() {
                                 </h1>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </Container>
-            </section>
+            </motion.section>
             <section className='py-14 mianbg'>
 
                 <Container>
