@@ -22,8 +22,8 @@ const WhatWeDo = () => {
           <div className="mt-20 flex flex-col gap-20">
             {WhatwedoData.map((item: IWhatWeDo, idx: number) => {
               return (
-                <div key={idx} className="grid md:grid-cols-2 bxs rounded-xl bg-white nth_class">
-                  <div className={`p-28 relative md:p-36 bg-no-repeat bg-center flex-col bg-cover rounded-t-xl rounded-b-xl ${idx % 2 === 1 && 'md:order-2'}`} style={{ backgroundImage: `url(${item.image.src})` }}>
+                <div key={idx} className="grid md:grid-cols-2 bxs rounded-xl bg-white">
+                  <div className={`p-28 relative md:p-36, bg-no-repeat bg-center flex-col bg-cover rounded-t-xl rounded-b-xl ${idx % 2 === 1 && 'md:order-2'}`} style={{ backgroundImage: `url(${item.image.src})` }}>
                     <button className="button p-3 absolute bottom-10 shadow-xl right-1/2 transform translate-x-1/2 px-6">How It Works <HiOutlineArrowRight /></button>
                   </div>
                   <div className="p-6 px-10">
