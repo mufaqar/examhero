@@ -5,32 +5,33 @@ import React from "react";
 import { Benefit, Ebook, Mockpaper, SchoolUse } from "../../public/svg/imports";
 import { motion, Variants } from "framer-motion";
 import { fadeUp } from "@/animation";
+import CountUp from 'react-countup';
 
 const StatsData = [
   {
-    stats: "50+",
+    stats: 50,
     title: "schools use ",
     icon: SchoolUse,
   },
   {
-    stats: "5000+",
+    stats: 5000,
     title: "students benefited",
     icon: Benefit,
   },
   {
-    stats: "8000+",
+    stats: 8000,
     title: "mock papers distributed",
     icon: Mockpaper,
   },
   {
-    stats: "10000+",
+    stats: 10000,
     title: " eBook reading volumes",
     icon: Ebook,
   },
 ];
 
 interface IStats {
-  stats: string;
+  stats: number;
   title: string;
   icon: any;
 }
@@ -85,13 +86,15 @@ const HomeModule = () => {
       {/* stats section */}
       <section >
         <div className="bg-light-pink/20 mt-10">
+        
           <Container small={true}>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 items-center py-12 gap-10">
               {StatsData.map((item: IStats, idx: number) => {
                 return (
                   <div key={idx} className="flex flex-col items-center justify-center">
                     <Image src={item.icon.src} width={40} height={40} alt={item.title} />
-                    <h3 className="sub-heading font-bold leading-10 text-main mt-5">{item.stats}</h3>
+                    <h3 className="sub-heading font-bold leading-10 text-main mt-5">
+                      <CountUp start={0} end={item.stats} duration={3} />+</h3>
                     <p className="text-main font-medium mt-2">{item.title}</p>
                   </div>
                 )
