@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import { Inter } from '@next/font/google';
 import {HomeModule} from '@/modules/imports';
+import {Client} from '../config/client'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({partners, whyus, stats, whatwedo, testimonials}:any) {
+  const data = {partners, whyus, stats, whatwedo, testimonials}
+  
   return (
     <>
       <Head>
@@ -13,7 +16,78 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/logo.png" />
       </Head>
-      <HomeModule/>
+      <HomeModule />
     </>
   )
+}
+
+
+export async function getStaticProps() {
+
+  // partners 
+  const partners = await Client.fetch(`*[_type == "partners"]{
+    title,
+    logo{
+      asset->{
+        url
+      }
+    }
+  }`);
+
+  // why us 
+  const whyus = await Client.fetch(`*[_type == "whyus"]{
+    title,
+    description,
+    logo{
+      asset->{
+        url
+      }
+    }
+  }`);
+
+  // stats 
+  const stats = await Client.fetch(`*[_type == "stats"]{
+    info,
+    stats_no,
+    logo{
+      asset->{
+        url
+      }
+    }
+  }`);
+
+  // what we do 
+  const whatwedo = await Client.fetch(`*[_type == "what_we_do"]{
+    title,
+    description,
+    link,
+    image{
+      asset->{
+        url
+      }
+    }
+  }`);
+
+  // testimonials
+  const testimonials = await Client.fetch(`*[_type == "testimonials"]{
+    rating,
+    profile{
+      asset->{
+        url
+      },
+      name,
+      designation
+    },
+    review
+  }`);
+
+  return {
+    props: {
+      partners,
+      whyus,
+      stats,
+      whatwedo,
+      testimonials
+    }
+  };
 }

@@ -6,6 +6,7 @@ import { motion, Variants } from "framer-motion";
 import { fadeUp } from '@/animation';
 import Slider from 'react-slick';
 
+
 const Partners = () => {
 
   const settings = {
@@ -73,3 +74,5 @@ const Partners = () => {
 }
 
 export default Partners
+
+

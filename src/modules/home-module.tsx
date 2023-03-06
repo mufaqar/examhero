@@ -7,6 +7,7 @@ import { motion, Variants } from "framer-motion";
 import { fadeUp } from "@/animation";
 import CountUp from 'react-countup';
 
+
 const StatsData = [
   {
     stats: 50,
