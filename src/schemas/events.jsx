@@ -40,11 +40,8 @@ export default {
     },
     {
      title: 'Link',
-     name: 'href',
-     type: 'url',
-     validation: Rule => Rule.uri({
-       scheme: ['http', 'https']
-     })
+     name: 'link',
+     type: 'string',
    }
   ],
 };

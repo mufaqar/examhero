@@ -6,7 +6,7 @@ import { Blog_Articles } from '../components/imports';
 import { motion, Variants } from "framer-motion";
 import { fadeUp } from "@/animation";
 
-function Blog_Module() {
+function Blog_Module({blog}) {
     return (
         <>
             <motion.section
@@ -61,7 +61,7 @@ function Blog_Module() {
             </motion.section>
             <section className='pb-14'>
                 <Container>
-                    <Blog_Articles />
+                    <Blog_Articles blog={blog}/>
                 </Container>
             </section>
         </>

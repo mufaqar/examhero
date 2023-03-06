@@ -6,7 +6,7 @@ import { News_One, News_Three, News_Two } from '../../public/images/imports';
 import { motion, Variants } from "framer-motion";
 import { fadeUp } from "@/animation";
 
-function CompanyNews() {
+function CompanyNews({events}) {
   return (
     <motion.div
       initial={"offscreen"}
@@ -21,26 +21,26 @@ function CompanyNews() {
       <motion.div 
       variants={fadeUp}
       className='grid md:grid-cols-3 grid-cols-1 md:gap-14 gap-10 mb-14'>
-        {News_datas.map((item, index) => (
+        {events.map((item:any, index:number) => (
           <div key={index} className='h-[530px] relative bg-gradient-to-b from-[#2D2D2D] to-[#525FE1] rounded-[16px] group transition-all ease-in-out'>
-            <Image src={item.feature} alt="" className='object-cover w-full h-full rounded-[16px] opacity-80 group-hover:opacity-60' />
+            <Image src={item?.image.asset.url} alt={item.title} className='object-cover w-full h-full rounded-[16px] opacity-80 group-hover:opacity-60' width={700} height={200}/>
             <div className=' absolute bottom-0'>
               <div className='px-8'>
                 <h3 className='text-white md:text-[32px] md:leading-[38px] text-[26px] leading-[32px] font-bold Urbanist mb-14'>
                   {item.title}
                 </h3>
                 <p className='text-white md:text-[18px] md:leading-[21px] text-base font-semibold Urbanist mb-4  hidden group-hover:block'>
-                  {item.content}
+                  {item.excerpt}
                 </p>
                 <p className='text-white md:text-[16px] md:leading-[24px] text-sm font-medium Urbanist  hidden group-hover:block'>
-                  {item.publish}
+                  {item.location}
                 </p>
               </div>
               <div>
-                <Link href="#"
+                <Link href={item?.link ? item?.link : '#'}
                   className='text-main bg-white md:text-[18px] md:leading-[28px] font-bold Urbanist px-6 py-2 rounded-tl-[16px] float-right hidden group-hover:block '>
-                  <span className='flex items-center space-x-1'>
-                    {item.linkTxt} <BsArrowRightShort size={28} />
+                  <span className='flex items-center capitalize space-x-1'>
+                    Read more <BsArrowRightShort size={28} />
                   </span>
                 </Link>
               </div>

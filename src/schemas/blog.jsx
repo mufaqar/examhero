@@ -40,6 +40,17 @@ export default {
      validation: Rule => Rule.uri({
        scheme: ['http', 'https']
      })
-   }
+   },
+   {
+    title: 'Release date',
+    name: 'releaseDate',
+    type: 'date'
+  },
+  {
+    name: "author",
+    type: "string",
+    title: "Author",
+  },
+
   ],
 };

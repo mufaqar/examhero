@@ -3,32 +3,33 @@ import Link from 'next/link';
 import React from 'react';
 import { Post10, Post2, Post3, Post4, Post5, Post6, Post7, Post8, Post9 } from '../../public/images/imports';
 
-function Blog_Articles() {
+function Blog_Articles({blog}) {
+    console.log("🚀 ~ file: blog-articles.tsx:7 ~ Blog_Articles ~ blog:", blog)
     return (
         <div className='grid md:grid-cols-3 grid-cols-1 md:gap-14 gap-10'>
-            {Articles.map((item, index) => (
+            {blog.map((item:any, index:number) => (
                 <div key={index} className='h-[588px] shadow-xl rounded-[10px] grid justify-between'>
-                    <Image src={item.feature} alt="" className='rounded-tr-[10px] rounded-tl-[10px]' />
+                    <Image src={item?.image.asset.url} alt="" className='rounded-tr-[10px] rounded-tl-[10px]' width={700} height={200}/>
                     <div className='md:px-6 px-4'>
                         <h3 className='text-[#1D2130] md:text-[24px] md:leading-[33px] text-[18px] leading-[26px] font-bold Urbanist'>
-                            {item.title}
+                            {item?.title}
                         </h3>
                         <p className='text-[#F00A0A] md:text-[16px] md:leading-[24px] text-[18px] leading-[26px] font-normal Urbanist mt-1'>
-                            {item.content}
+                            {item?.excerpt}
                         </p>
                         <p className='md:text-[16px] md:leading-[24px] text-[14px] leading-[26px] font-normal Urbanist mt-1'>
                             <span className='text-[#F00A0A]'>
                                 {item.author}
                             </span> | <span className='text-[#1D2130]'>
-                                {item.publish}
+                                {item.releaseDate}
                             </span>
                         </p>
                     </div>
                     <div className='md:px-6 px-4'>
-                        <Link href="https://www.51cto.com/article/697966.html" target="_blank"
-                            className='text-white bg-main hover:bg-main/90 md:text-[16px] md:leading-[24px] font-normal Urbanist px-3 py-1 rounded-[2px]'>
-                            {item.linkTxt}
+                        <Link href={item?.href} target="_blank" className='text-white bg-main hover:bg-main/90 md:text-[16px] md:leading-[24px] font-normal Urbanist px-3 py-1 rounded-[2px]'>
+                        learn more
                         </Link>
+                        
                     </div>
                 </div>
             ))}
