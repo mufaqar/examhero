@@ -1,17 +1,17 @@
 import { Container } from "@/constant/imports";
 import Image from "next/image";
 import React from "react";
-import { WhyUsData } from "../../public/DataFiles/whyUs";
 import { motion, Variants } from "framer-motion";
 import { fadeUp } from "@/animation";
 
 interface IWhyUsData {
   title: string;
-  content: string;
-  imagePath: any;
+  logo: any;
+  description: string;
+  caption:string
 }
 
-const WhyUs = () => {
+const WhyUs = ({whyus}) => {
 
   return (
     <motion.section
@@ -33,21 +33,21 @@ const WhyUs = () => {
             </p>
           </div>
           <div className="md:w-8/12 grid grid-cols-2 md:grid-cols-3 gap-16">
-            {WhyUsData.map((why: IWhyUsData, idx: number) => {
+            {whyus.map((why: IWhyUsData, idx: number) => {
               return (
                 <div key={idx}>
                   <figure className="bg-main w-16 h-16 p-3 rounded-xl">
                     <Image
-                      src={why.imagePath.src}
-                      alt=""
+                      src={why?.logo?.asset?.url}
+                      alt={why?.caption}
                       width={76}
                       height={76}
                     />
                   </figure>
                   <h4 className="text-black font-bold text-lg mt-4 mb-1">
-                    {why.title}
+                    {why?.title}
                   </h4>
-                  <p>{why.content}</p>
+                  <p>{why?.description}</p>
                 </div>
               );
             })}

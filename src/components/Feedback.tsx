@@ -16,7 +16,7 @@ interface IFeedback {
   rating: number;
 }
 
-const Feedback = () => {
+const Feedback = ({testimonials}) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -39,7 +39,7 @@ const Feedback = () => {
         <div className="md:flex gap-10 lg:gap-20 ">
           <div className="bg-white relative rounded-md p-10 md:w-[60%]">
             <Slider {...settings} ref={ref}>
-              {Feedbackdata.map((review, idx) => {
+              {testimonials.map((review:any, idx:number) => {
                 var star: number[] = [];
                 for (let i = 0; i < review.rating; i++) {
                   star.push(i);
@@ -55,16 +55,16 @@ const Feedback = () => {
                     <p className="mt-5 mb-5 text-gray-400">{review.review}</p>
                     <div className="flex items-center gap-4 mt-8">
                       <Image
-                        src={review.user?.image.src}
-                        alt={review.user.name}
+                        src={review?.profile?.asset.url}
+                        alt={review?.profile.name}
                         width={60}
                         height={60}
                       />
                       <div>
                         <h4 className="font-bold text-base">
-                          {review.user.name}
+                          {review.profile.name}
                         </h4>
-                        <p className="text-main">{review.user.designation}</p>
+                        <p className="text-main">{review.profile.designation}</p>
                       </div>
                     </div>
                   </div>

@@ -16,7 +16,7 @@ export default function Home({partners, whyus, stats, whatwedo, testimonials}:an
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/logo.png" />
       </Head>
-      <HomeModule />
+      <HomeModule data={data}/>
     </>
   )
 }

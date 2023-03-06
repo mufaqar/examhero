@@ -32,12 +32,14 @@ const StatsData = [
 ];
 
 interface IStats {
-  stats: number;
-  title: string;
-  icon: any;
+  stats_no: number;
+  info: string;
+  logo: any;
+  caption: string;
 }
 
-const HomeModule = () => {
+const HomeModule = ({data}) => {
+  const { partners, whyus, stats, whatwedo, testimonials } = data
   return (
     <section>
       <Main />
@@ -82,21 +84,21 @@ const HomeModule = () => {
         </Container>
       </motion.div>
       {/* partners section  */}
-      <Partners />
-      <WhyUs />
+      <Partners partners={partners}/>
+      <WhyUs whyus={whyus}/>
       {/* stats section */}
       <section >
         <div className="bg-light-pink/20 mt-10">
         
           <Container small={true}>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 items-center py-12 gap-10">
-              {StatsData.map((item: IStats, idx: number) => {
+              {stats.map((item: IStats, idx: number) => {
                 return (
                   <div key={idx} className="flex flex-col items-center justify-center">
-                    <Image src={item.icon.src} width={40} height={40} alt={item.title} />
+                    <Image src={item?.logo?.asset.url} width={40} height={40} alt={item?.caption} />
                     <h3 className="sub-heading font-bold leading-10 text-main mt-5">
-                      <CountUp start={0} end={item.stats} duration={3} />+</h3>
-                    <p className="text-main font-medium mt-2">{item.title}</p>
+                      <CountUp start={0} end={item?.stats_no} duration={3} />+</h3>
+                    <p className="text-main font-medium mt-2">{item?.info}</p>
                   </div>
                 )
               })}
@@ -106,9 +108,9 @@ const HomeModule = () => {
       </section>
 
       {/* what we do section  */}
-      <WhatWeDo />
+      <WhatWeDo whatwedo={whatwedo}/>
       {/* feedback section  */}
-      <Feedback />
+      <Feedback testimonials={testimonials}/>
       {/* giftacard section  */}
       <Giftcard />
 

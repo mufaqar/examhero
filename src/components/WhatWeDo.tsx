@@ -11,7 +11,7 @@ interface IWhatWeDo {
   link: string;
 }
 
-const WhatWeDo = () => {
+const WhatWeDo = ({whatwedo}) => {
   return (
     <section className="relative bg-[url('../../public/images/whatwedo-diamond.png')] bg-no-repeat bg-left-top pb-28" id="services">
       <h2 className="sub-heading font-bold text-center mt-20 text-main">
@@ -20,10 +20,10 @@ const WhatWeDo = () => {
       <div>
         <Container>
           <div className="mt-20 flex flex-col gap-20">
-            {WhatwedoData.map((item: IWhatWeDo, idx: number) => {
+            {whatwedo.map((item: IWhatWeDo, idx: number) => {
               return (
                 <div key={idx} className="grid md:grid-cols-2 bxs rounded-xl bg-white">
-                  <div className={`p-28 relative md:p-36 bg-no-repeat bg-center flex-col bg-cover rounded-t-xl rounded-b-xl ${idx % 2 === 1 && 'md:order-2'}`} style={{ backgroundImage: `url(${item.image.src})` }}>
+                  <div className={`p-28 relative md:p-36 bg-no-repeat bg-center flex-col bg-cover rounded-t-xl rounded-b-xl ${idx % 2 === 1 && 'md:order-2'}`} style={{ backgroundImage: `url(${item?.image.asset.url})` }}>
                     <button className="button p-3 absolute bottom-10 shadow-xl right-1/2 transform translate-x-1/2 px-6">How It Works <HiOutlineArrowRight /></button>
                   </div>
                   <div className="p-6 px-10">
