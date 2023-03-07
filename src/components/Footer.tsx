@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <footer className="footerbg pt-28">
       <Container>
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-3">
           <div>
             <Logo className="border border-white" />
             <div className="flex gap-3 my-10">
@@ -27,6 +27,7 @@ const Footer = () => {
                 return (
                   <Link
                     href={item.link}
+                    target="_blank"
                     className="border-1 border text-white rounded-sm text-xl hover:bg-white hover:text-main border-white p-2"
                     key={i}
                   >
@@ -37,23 +38,6 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h4 className="text-xl text-white font-semibold">About ExamHero</h4>
-            <ul className="mt-6 flex flex-col gap-2">
-              <li className="text-white item-center">
-                <Link href="#" className="flex items-center gap-1">
-                  <RxDoubleArrowRight />
-                  About Us
-                </Link>
-              </li>
-              <li className="text-white item-center">
-                <Link href="#" className="flex items-center gap-1">
-                  <RxDoubleArrowRight />
-                  Job Opportunity
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
             <h4 className="text-xl text-white font-semibold">
               Customer Services
             </h4>
@@ -61,11 +45,6 @@ const Footer = () => {
               <li className="text-white item-center">
                 <Link href="/contact-with-us" className="flex items-center gap-1">
                   Contact Us
-                </Link>
-              </li>
-              <li className="text-white item-center">
-                <Link href="#" className="flex items-center gap-1">
-                  FAQs
                 </Link>
               </li>
               <li className="text-white item-center">
@@ -110,7 +89,7 @@ export default Footer;
 const social = [
   {
     icon: <FaFacebookF />,
-    link: "#",
+    link: "https://www.facebook.com/people/ExamHero-%E5%AD%B8%E9%9C%B8%E6%94%BB%E7%95%A5/100090568546273/",
   },
   {
     icon: <FaTwitter />,

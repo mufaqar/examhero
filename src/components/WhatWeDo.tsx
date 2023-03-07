@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { W1, W2, W3, W4 } from "../../public/images/imports";
 import { HiOutlineArrowRight } from 'react-icons/hi';
+import Link from "next/link";
 
 interface IWhatWeDo {
   image: any;
@@ -24,7 +25,7 @@ const WhatWeDo = ({whatwedo}) => {
               return (
                 <div key={idx} className="grid md:grid-cols-2 bxs rounded-xl bg-white">
                   <div className={`p-28 relative md:p-36 bg-no-repeat bg-center flex-col bg-cover rounded-t-xl rounded-b-xl ${idx % 2 === 1 && 'md:order-2'}`} style={{ backgroundImage: `url(${item?.image.asset.url})` }}>
-                    <button className="button p-3 absolute bottom-10 shadow-xl right-1/2 transform translate-x-1/2 px-6">How It Works <HiOutlineArrowRight /></button>
+                    <Link href={item.link} className="button p-3 absolute bottom-10 shadow-xl right-1/2 transform translate-x-1/2 px-6">How It Works <HiOutlineArrowRight /></Link>
                   </div>
                   <div className="p-6 px-10">
                     <h3 className="text-[32px] font-semibold">{item.title}</h3>
