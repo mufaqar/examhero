@@ -24,7 +24,7 @@ const WhatWeDo = ({whatwedo}) => {
             {whatwedo.map((item: IWhatWeDo, idx: number) => {
               return (
                 <div key={idx} className="grid md:grid-cols-2 items-center bxs rounded-xl bg-white">
-                  <div className={`p-0 relative md:h-[454px] h-[260px] bg-no-repeat bg-center flex-col bg-cover rounded-t-xl rounded-b-xl ${idx % 2 === 1 && 'md:order-2'}`} style={{ backgroundImage: `url(${item?.image.asset.urls})` }}>
+                  <div className={`p-0 relative md:h-[454px] h-[260px] bg-no-repeat bg-center flex-col bg-cover rounded-t-xl rounded-b-xl ${idx % 2 === 1 && 'md:order-2'}`}>
                     <Image src={item?.image.asset.url} fill alt="" className="w-full h-full" />
                     <Link href={item.link} className="button p-3 absolute bottom-10 shadow-xl right-1/2 transform translate-x-1/2 px-6">How It Works <HiOutlineArrowRight /></Link>
                   </div>
