@@ -16,9 +16,9 @@ function CompanyBanner() {
          className='px-4 mianbg flex flex-col items-center justify-center pt-36 md:pt-[87px]'>
             <Container>
                 <div className='grid md:grid-cols-2 grid-cols-1 md:gap-16 gap-10 items-center mt-16'>
-                    <div>
+                    <motion.div variants={fadeUp}>
                         <Image src={Company} alt="" />
-                    </div>
+                    </motion.div>
                     <motion.div variants={fadeUp}>
                         <div className='mb-20'>
                             <h3 className='md:text-[48px] md:leading-[57px] text-[36px] leading-[48px] font-bold Urbanist'>Events</h3>
