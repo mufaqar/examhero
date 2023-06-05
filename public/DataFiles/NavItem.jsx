@@ -1,7 +1,7 @@
 export const navItems = [
   {
     name: 'Products and Services',
-    link: '#services',
+    link: '/#services',
   },
   {
     name: 'Events and News',
